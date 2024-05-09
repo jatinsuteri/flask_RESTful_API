@@ -80,7 +80,6 @@ class Video(Resource):
         db.session.commit()
         return '', 204
 
-    # Allow POST method for creating videos
     @marshal_with(resource_fields)
     def post(self, video_id):
         args = video_put_args.parse_args()
